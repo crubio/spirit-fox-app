@@ -5,12 +5,12 @@ import StickyFooter from "../components/common/footer"
 function HomePage() {
   return (
     <>
-      <Grid className="MuiContainer-disableGutters .MuiContainer-disableGutters" container spacing={0}
+      <Grid container spacing={0}
       sx={{ height: '90vh' }}
       >
         <Grid item xs />
         <Grid
-          item xs={6}
+          item xs={12}
           container
           spacing={0}
           direction="column"
@@ -47,7 +47,6 @@ function HomePage() {
       </Grid>
       <StickyFooter />
     </>
-    
   )
 }
 
