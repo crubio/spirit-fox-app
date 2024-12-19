@@ -1,17 +1,22 @@
-import { Container } from "@mui/material"
+import { Container, createTheme, ThemeProvider } from "@mui/material"
 import '@fontsource/lancelot'
 import './index.css'
 import HomePage from "./pages/home"
 import CssBaseline from '@mui/material/CssBaseline';
+import { themeOptions } from "./config/theme";
+
+const theme = createTheme(themeOptions);
 
 function App() {
 
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <HomePage />
-      </Container>
+      <ThemeProvider theme={theme}>
+        <Container maxWidth={false} sx={{fontFamily: 'Barlow'}}>
+          <HomePage />
+        </Container>
+      </ThemeProvider>
     </>
   )
 }
