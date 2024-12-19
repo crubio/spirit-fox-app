@@ -1,12 +1,13 @@
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import { themeOptions } from '../../config/theme';
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="text.secondary">
+    <Typography variant="body1" color="text.secondary" align='center'>
       {'Copyright © '}
       <Link color="inherit" href="https://spiritfoxllc.com/">
         www.spiritfoxllc.com
@@ -18,25 +19,22 @@ function Copyright() {
 }
 
 // TODO - Add a theme switcher later on
-const defaultTheme = createTheme();
 
 export default function StickyFooter() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={themeOptions}>
       <Box
           component="footer"
           sx={{
             py: 3,
             px: 2,
             mt: 'auto',
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[200]
-                : theme.palette.grey[800],
+            backgroundColor: "primary.main",
+            color: "secondary.main"
           }}
         >
           <Container maxWidth="sm">
-            <Typography variant="body1">
+            <Typography variant="body1" align='center'>
               SPIRIT FOX LLC
             </Typography>
             <Copyright />
