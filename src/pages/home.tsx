@@ -10,6 +10,7 @@ import PrintIcon from '@mui/icons-material/Print';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import LanguageIcon from '@mui/icons-material/Language';
 import FeaturedCard from "../features/common/card";
+import { EmailSubscribe } from "../lib/subscription";
 
 export const Item = styled(Paper)(({}) => {
   return {
@@ -132,7 +133,7 @@ function AboutComponent() {
           alt="spirit fox logo"
           src={HeroImg}
         />
-        <Grid container sx={{padding: '16px'}}>
+        <Grid container sx={{padding: 2}}>
           <Grid item xs={12}>
             <Typography
               variant="h4"
@@ -166,6 +167,25 @@ function AboutComponent() {
               For more information, please visit our <DefaultLink href="https://www.amazon.com/stores/Spirit-Fox-LLC/author/B0DPH38WY5">Amazon store</DefaultLink>, or email us <DefaultLink href="mailto:inquiries@spiritfoxllc.com">here</DefaultLink>.
             </Typography>
           </Grid>
+          <Grid item xs={12} sx={{marginTop: 2}}>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Typography
+              variant="body1"
+              sx={{
+                textAlign: 'center'
+              }}
+            >
+              Want to hear about our latest releases and special offers? Sign up for our newsletter here. 
+              <Box sx={{mt:2}}>
+                <EmailSubscribe />
+              </Box>
+            </Typography>
+          </Box>
+          </Grid>
         </Grid>
       </Container>
     </>
@@ -175,12 +195,10 @@ function AboutComponent() {
 function HomePage() {
   return (
     <>
-      <Typography>
-        <HeroComponent />
-        <FeaturedComponent />
-        <AboutComponent />
-        <StickyFooter />
-      </Typography>
+      <HeroComponent />
+      <FeaturedComponent />
+      <AboutComponent />
+      <StickyFooter />
     </>
   )
 }

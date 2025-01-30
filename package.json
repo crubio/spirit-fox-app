@@ -16,6 +16,10 @@
     "@fontsource/lancelot": "^5.0.20",
     "@mui/icons-material": "^6.2.0",
     "@mui/material": "^5.15.20",
+    "@types/jsonp": "^0.2.3",
+    "@types/lodash": "^4.17.15",
+    "jsonp": "^0.2.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
